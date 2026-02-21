@@ -1,0 +1,5 @@
+# This project uses only standard library modules
+# No external dependencies required
+
+# This file is intentionally left blank except for comments
+# to indicate that this project has zero external dependencies

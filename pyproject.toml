@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "weather-logger"
+version = "1.0.0"
+description = "A lightweight Python CLI tool for logging weather data to CSV"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.7"
+authors = [
+    {name = "Rato", email = "rato@example.com"}
+]
+keywords = ["weather", "cli", "csv", "open-meteo", "logging"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+weather-logger = "weather_logger.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/rato/weather-logger"
+Documentation = "https://github.com/rato/weather-logger#readme"
+Repository = "https://github.com/rato/weather-logger.git"
+Issues = "https://github.com/rato/weather-logger/issues"
+
+[tool.setuptools]
+py-modules = ["weather"]
