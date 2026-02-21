@@ -10,7 +10,8 @@ jobs:
   test:
     runs-on:
       - self-hosted
-      - k3s
+      - linux
+      - x64
 
     steps:
       - name: Checkout code
@@ -39,7 +40,8 @@ jobs:
   build:
     runs-on:
       - self-hosted
-      - k3s
+      - linux
+      - x64
     needs: test
 
     steps:
