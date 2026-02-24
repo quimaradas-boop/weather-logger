@@ -28,7 +28,7 @@ classifiers = [
 ]
 
 [project.scripts]
-weather-logger = "weather_logger.cli:main"
+weather-logger = "weather:main"
 
 [project.urls]
 Homepage = "https://github.com/rato/weather-logger"

@@ -8,10 +8,7 @@ on:
 
 jobs:
   test:
-    runs-on:
-      - self-hosted
-      - linux
-      - x64
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -38,10 +35,7 @@ jobs:
           pytest
 
   build:
-    runs-on:
-      - self-hosted
-      - linux
-      - x64
+    runs-on: ubuntu-latest
     needs: test
 
     steps:
