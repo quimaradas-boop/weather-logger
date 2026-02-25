@@ -8,11 +8,10 @@ import argparse
 import csv
 import json
 import sys
-import time
 import urllib.request
 import urllib.error
 from datetime import datetime
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, Optional, Tuple
 
 
 # Weather code mapping (WMO codes to readable conditions)
@@ -157,7 +156,7 @@ def save_to_csv(data: Dict, location: str, lat: float, lon: float, filename: str
     # Check if file exists to determine if we need to write header
     file_exists = False
     try:
-        with open(filename, 'r') as f:
+        with open(filename, 'r') as _:
             file_exists = True
     except FileNotFoundError:
         pass
