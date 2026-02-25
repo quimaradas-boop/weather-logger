@@ -123,7 +123,7 @@ def fetch_weather_data(lat: float, lon: float, timeout: int = 10) -> Optional[Di
             'conditions': condition
         }
         
-    except (urllib.error.URLError, json.JSONDecodeError, KeyError) as e:
+    except (urllib.error.URLError, json.JSONDecodeError, KeyError, Exception) as e:
         print(f"Error fetching weather data for coordinates ({lat}, {lon}): {e}", file=sys.stderr)
         return None
 
