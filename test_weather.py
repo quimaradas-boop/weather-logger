@@ -17,6 +17,9 @@ class TestWeatherFunctions(unittest.TestCase):
         self.assertEqual(weather.WEATHER_CODES[45], "Fog")
         self.assertEqual(weather.WEATHER_CODES[95], "Thunderstorm")
         self.assertEqual(weather.WEATHER_CODES[99], "Thunderstorm with heavy hail")
+        # Test edge cases
+        self.assertEqual(weather.WEATHER_CODES.get(999, "Unknown"), "Unknown")
+        self.assertEqual(weather.WEATHER_CODES.get(100, "Unknown"), "Unknown")
         
     def test_geocode_city_success(self):
         """Test successful geocoding of a city"""
